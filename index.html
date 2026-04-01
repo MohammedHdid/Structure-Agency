@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Structure Agency | Professional Landing Pages</title>
+    <meta name="description" content="Structure Agency builds premium, high-converting landing pages for coaches & content creators." />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar glass-effect sticky">
+      <div class="container nav-content">
+        <a href="#" class="logo">
+          <span class="logo-text">Structure</span><span class="logo-accent">Agency</span>
+        </a>
+        <div class="nav-links">
+          <a href="#work" data-i18n="nav_work">Our Work</a>
+          <a href="#process" data-i18n="nav_process">Process</a>
+          <a href="#pricing" data-i18n="nav_pricing">Pricing</a>
+          <a href="#faq" data-i18n="nav_faq">FAQ</a>
+        </div>
+        <div class="nav-actions">
+          <button id="langToggle" class="btn-ghost" aria-label="Toggle Language">🇸🇦 AR</button>
+          <a href="#cta" class="btn btn-primary led-border" data-i18n="nav_cta">Book 30-min Call</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero overflow-hidden position-relative">
+      <div class="glow-orb orb-1"></div>
+      <div class="glow-orb orb-2"></div>
+      
+      <div class="container hero-content text-center">
+        <div class="badge fade-up" data-i18n="hero_badge">For Coaches & Creators</div>
+        <h1 class="hero-title fade-up delay-1" data-i18n="hero_title">
+          We Build <span class="text-accent gradient-text">Premium Landing Pages</span> That Convert
+        </h1>
+        <p class="hero-subtitle fade-up delay-2" data-i18n="hero_subtitle">
+          Transform your audience into clients with professional, high-converting landing pages designed specifically for your brand.
+        </p>
+        <div class="hero-cta fade-up delay-3">
+          <a href="#cta" class="btn btn-primary btn-large led-glow">
+            <span data-i18n="hero_cta_primary">Book Your Strategy Call</span>
+            <i data-lucide="calendar"></i>
+          </a>
+          <a href="#work" class="btn btn-outline btn-large" data-i18n="hero_cta_secondary">See Our Work</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Examples / Carousel Section -->
+    <section id="work" class="section bg-secondary">
+      <div class="container text-center">
+        <h2 class="section-title fade-target" data-i18n="work_title">Proven Aesthetics</h2>
+        <p class="section-subtitle fade-target" data-i18n="work_subtitle">Explore some of our recent transformations.</p>
+      </div>
+      
+      <div class="carousel-container fade-target">
+        <div class="carousel-track" id="carouselTrack">
+          <!-- Populated by JS -->
+          <div class="carousel-slide">
+             <div class="mockup-frame">
+               <div class="mockup-content style-1"></div>
+             </div>
+             <h3 data-i18n="work_example_1">Fitness Coach</h3>
+          </div>
+          <div class="carousel-slide">
+             <div class="mockup-frame">
+               <div class="mockup-content style-2"></div>
+             </div>
+             <h3 data-i18n="work_example_2">Business Consultant</h3>
+          </div>
+          <div class="carousel-slide">
+             <div class="mockup-frame">
+               <div class="mockup-content style-3"></div>
+             </div>
+             <h3 data-i18n="work_example_3">Content Creator</h3>
+          </div>
+          <div class="carousel-slide">
+             <div class="mockup-frame">
+               <div class="mockup-content style-1"></div>
+             </div>
+             <h3 data-i18n="work_example_1">Fitness Coach</h3> <!-- Duplicate for loop -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline / Process Section -->
+    <section id="process" class="section">
+      <div class="container">
+        <div class="text-center mb-5 fade-target">
+          <h2 class="section-title" data-i18n="process_title">How We Work</h2>
+          <p class="section-subtitle" data-i18n="process_subtitle">From zero to launch in 4 simple steps.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item fade-target">
+            <div class="timeline-marker"><i data-lucide="phone"></i></div>
+            <div class="timeline-content glass-card">
+              <h3 data-i18n="process_step1_title">1. Discovery Call</h3>
+              <p data-i18n="process_step1_desc">We discuss your goals, target audience, and brand vision.</p>
+            </div>
+          </div>
+          <div class="timeline-item fade-target">
+            <div class="timeline-marker"><i data-lucide="pen-tool"></i></div>
+            <div class="timeline-content glass-card">
+              <h3 data-i18n="process_step2_title">2. Design & Strategy</h3>
+              <p data-i18n="process_step2_desc">We create a high-converting wireframe and stunning UI design.</p>
+            </div>
+          </div>
+          <div class="timeline-item fade-target">
+            <div class="timeline-marker"><i data-lucide="code"></i></div>
+            <div class="timeline-content glass-card">
+              <h3 data-i18n="process_step3_title">3. Development</h3>
+              <p data-i18n="process_step3_desc">We build it with robust code, blazing fast speeds, and flawless mobile responsiveness.</p>
+            </div>
+          </div>
+          <div class="timeline-item fade-target">
+            <div class="timeline-marker"><i data-lucide="rocket"></i></div>
+            <div class="timeline-content glass-card">
+              <h3 data-i18n="process_step4_title">4. Launch & Handoff</h3>
+              <p data-i18n="process_step4_desc">Final review, domain connection, and you're ready to convert.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section id="proof" class="section bg-secondary">
+      <div class="container">
+        <div class="split-layout">
+          <!-- Review Side -->
+          <div class="proof-card glass-card led-border fade-target left-side">
+            <div class="stars">
+              <i data-lucide="star" class="text-warning"></i>
+              <i data-lucide="star" class="text-warning"></i>
+              <i data-lucide="star" class="text-warning"></i>
+              <i data-lucide="star" class="text-warning"></i>
+              <i data-lucide="star" class="text-warning"></i>
+            </div>
+            <p class="review-text" data-i18n="review_text">"Structure Agency completely changed the game for me. My landing page not only looks premium but my lead generation skyrocketed by 300% in the first two weeks."</p>
+            <div class="reviewer">
+              <img src="./Inspiration/client_3.png" alt="Sarah Jenkins" class="avatar-img">
+              <div>
+                <h4 data-i18n="reviewer_name">Sarah Jenkins</h4>
+                <span class="text-sm text-secondary" data-i18n="reviewer_title">Fitness Coach</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Chart Side -->
+          <div class="chart-card glass-card fade-target right-side">
+            <h3 data-i18n="chart_title">Conversion Rate Growth</h3>
+            <div class="chart-container">
+              <div class="chart-line-wrapper">
+                 <svg viewBox="0 0 100 50" class="chart-svg" preserveAspectRatio="none">
+                   <path class="animated-curve" d="M0 45 C 20 40, 40 45, 60 20 S 80 15, 100 5" fill="none" stroke="var(--accent)" stroke-width="3" />
+                 </svg>
+                 <div class="chart-dot dot-1"></div>
+                 <div class="chart-dot dot-2"></div>
+                 <div class="chart-dot dot-3"></div>
+              </div>
+            </div>
+            <div class="chart-stats mt-3">
+              <span class="text-accent fw-bold text-xl">+45%</span> <span data-i18n="chart_subtitle">Average Increase</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section">
+      <div class="container">
+        <div class="text-center mb-5 fade-target">
+          <h2 class="section-title" data-i18n="pricing_title">Simple, Transparent Pricing</h2>
+          <p class="section-subtitle" data-i18n="pricing_subtitle">Invest in your brand's future. Limited time promotional offers.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Tier 1 -->
+          <div class="price-card glass-card fade-target">
+            <div class="price-header">
+              <h3 data-i18n="tier1_title">Starter</h3>
+              <p data-i18n="tier1_desc">Perfect for essential online presence.</p>
+              <div class="price">
+                <span class="old-price">$395</span>
+                <span class="new-price">$295</span>
+              </div>
+              <div class="maintenance-fee text-sm text-secondary mb-3 fw-bold" data-i18n="tier1_maintenance">+ $10/mo Maintenance</div>
+              <div class="savings badge" data-i18n="save_25">Save 25%</div>
+            </div>
+            <ul class="features-list">
+              <li><i data-lucide="check-circle-2"></i> <span data-i18n="tier1_f1">Beautiful Landing Page</span></li>
+              <li><i data-lucide="check-circle-2"></i> <span data-i18n="tier1_f2">All Standard Sections</span></li>
+              <li><i data-lucide="check-circle-2"></i> <span data-i18n="tier1_f3">Mobile Responsive</span></li>
+              <li><i data-lucide="check-circle-2"></i> <span data-i18n="tier1_f4">WhatsApp Direct CTA</span></li>
+            </ul>
+            <a href="#cta" class="btn btn-outline btn-full mt-4" data-i18n="pricing_btn">Get Started</a>
+          </div>
+
+          <!-- Tier 2 -->
+          <div class="price-card glass-card popular-tier led-glow fade-target delay-1">
+            <div class="popular-badge" data-i18n="popular_badge">Most Popular</div>
+            <div class="price-header">
+              <h3 data-i18n="tier2_title">Pro</h3>
+              <p data-i18n="tier2_desc">Automate your 1:1 scheduling.</p>
+              <div class="price">
+                <span class="old-price">$695</span>
+                <span class="new-price text-accent">$495</span>
+              </div>
+              <div class="maintenance-fee text-sm text-secondary mb-3 fw-bold" data-i18n="tier2_maintenance">+ $20/mo Maintenance</div>
+              <div class="savings badge bg-accent text-white" data-i18n="save_28">Save 28%</div>
+            </div>
+            <ul class="features-list">
+              <li><i data-lucide="plus-circle" class="text-accent"></i> <span class="text-accent fw-bold" data-i18n="everything_tier1">Everything in Starter</span></li>
+              <li><i data-lucide="check-circle-2"></i> <span data-i18n="tier2_f1">Direct Calendar Booking</span></li>
+              <li><i data-lucide="check-circle-2"></i> <span data-i18n="tier2_f2">Custom Form Intake</span></li>
+              <li><i data-lucide="check-circle-2"></i> <span data-i18n="tier2_f3">Premium Animations</span></li>
+            </ul>
+            <a href="#cta" class="btn btn-primary btn-full mt-4" data-i18n="pricing_btn">Get Started</a>
+          </div>
+
+          <!-- Tier 3 -->
+          <div class="price-card glass-card fade-target delay-2">
+            <div class="price-header">
+              <h3 data-i18n="tier3_title">Automated AI</h3>
+              <p data-i18n="tier3_desc">Future-proof with a custom 24/7 AI agent.</p>
+              <div class="price">
+                <span class="old-price">$1195</span>
+                <span class="new-price">$895</span>
+              </div>
+              <div class="maintenance-fee text-sm text-secondary mb-3 fw-bold" data-i18n="tier3_maintenance">+ $100/mo Maintenance</div>
+              <div class="savings badge" data-i18n="save_25">Save 25%</div>
+            </div>
+            <ul class="features-list">
+              <li><i data-lucide="plus-circle" class="text-accent"></i> <span class="text-accent fw-bold" data-i18n="everything_tier2">Everything in Pro</span></li>
+              <li><i data-lucide="check-circle-2"></i> <span data-i18n="tier3_f1">AI Chat Agent Integration</span></li>
+              <li><i data-lucide="check-circle-2"></i> <span data-i18n="tier3_f2">Automated Q&A Handling</span></li>
+              <li><i data-lucide="check-circle-2"></i> <span data-i18n="tier3_f3">Agent Direct Booking</span></li>
+            </ul>
+            <a href="#cta" class="btn btn-outline btn-full mt-4" data-i18n="pricing_btn">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section bg-secondary">
+      <div class="container accordion-container">
+        <div class="text-center mb-5 fade-target">
+          <h2 class="section-title" data-i18n="faq_title">Frequently Asked Questions</h2>
+        </div>
+        
+        <div class="accordion fade-target">
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span data-i18n="faq_q1">How long does it take to deliver the landing page?</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="accordion-content">
+              <p data-i18n="faq_a1">Typically, a landing page takes between 3 to 7 business days from the discovery call to the final launch, depending on the tier and features selected.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span data-i18n="faq_q2">Do I need to provide images and text?</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="accordion-content">
+              <p data-i18n="faq_a2">We highly recommend providing your own professional photos. However, we assist with copywriting and structuring your offer to ensure maximum conversion.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span data-i18n="faq_q3">Can I upgrade to the AI Chat agent later?</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="accordion-content">
+              <p data-i18n="faq_a3">Yes! You can start with the Starter or Pro tier and upgrade to the Automated AI tier at any time as your business grows.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span data-i18n="faq_q4">What platform do you use to build the pages?</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="accordion-content">
+              <p data-i18n="faq_a4">We use modern, lightweight coding frameworks ensuring incredibly fast load speeds, far outperforming traditional page builders like WordPress or Wix.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span data-i18n="faq_q5">Is there a monthly maintenance fee?</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="accordion-content">
+              <p data-i18n="faq_a5">Yes, there is a small monthly maintenance fee depending on your tier: $10 for Starter, $20 for Pro, and $100 for Automated AI. You only pay for your own domain and basic hosting which we help you set up.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA / Calendly Placeholder -->
+    <section id="cta" class="section position-relative overflow-hidden">
+      <div class="glow-orb orb-3"></div>
+      <div class="container text-center fade-target">
+        <h2 class="section-title text-accent gradient-text" data-i18n="final_cta_title">Ready to scale your business?</h2>
+        <p class="section-subtitle mx-auto mb-4" data-i18n="final_cta_subtitle">Book your 30-minute discovery call below. Let's discuss how we can build a high-converting machine for your brand.</p>
+        
+        <div class="calendly-placeholder glass-card led-border mx-auto" style="padding: 12px; overflow: hidden;">
+          <!-- Calendly inline widget begin -->
+          <div class="calendly-inline-widget" data-url="https://calendly.com/hdid-mohammed/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=f8f9ff&text_color=1a1a2e&primary_color=2563eb" style="min-width:320px;height:650px;"></div>
+          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+          <!-- Calendly inline widget end -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer border-top bg-primary">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#" class="logo mb-2">
+              <span class="logo-text">Structure</span><span class="logo-accent">Agency</span>
+            </a>
+            <p class="text-sm text-secondary" data-i18n="footer_desc">Engineering digital trust and high conversions for modern coaches and creators.</p>
+          </div>
+          <div class="footer-links">
+            <h4 data-i18n="footer_links_title">Quick Links</h4>
+            <a href="#work" data-i18n="nav_work">Our Work</a>
+            <a href="#process" data-i18n="nav_process">Process</a>
+            <a href="#pricing" data-i18n="nav_pricing">Pricing</a>
+          </div>
+          <div class="footer-contact">
+            <h4 data-i18n="footer_contact_title">Contact</h4>
+            <a href="mailto:hello@structure.agency">hello@structure.agency</a>
+            <div class="social-icons mt-2">
+              <a href="#"><i data-lucide="instagram"></i></a>
+              <a href="#"><i data-lucide="twitter"></i></a>
+              <a href="#"><i data-lucide="linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="text-sm text-secondary text-center">&copy; 2026 Structure Agency. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
