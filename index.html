@@ -391,7 +391,12 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="./lucide.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      setTimeout(() => {
+        if (window.lucide) window.lucide.createIcons();
+      }, 100);
+    </script>
     <script type="module" src="./main.js"></script>
   </body>
 </html>

@@ -439,9 +439,10 @@ img {
 .style-3 { background: linear-gradient(135deg, #DA4453 0%, #89216B 100%); }
 
 /* Mockup Assets */
-.mockup-1 { background-image: url('./Assets/Mockup 1.png'); }
-.mockup-2 { background-image: url('./Assets/Mockup 6.png'); }
-.mockup-3 { background-image: url('./Assets/Mockup 3.png'); }
+/* Mockup Assets */
+.mockup-1 { background-image: url('./Assets/Mockup-1.png'); }
+.mockup-2 { background-image: url('./Assets/Mockup-6.png'); }
+.mockup-3 { background-image: url('./Assets/Mockup-3.png'); }
 
 .carousel-controls {
   display: flex;
