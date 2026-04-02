@@ -16,9 +16,9 @@ const translations = {
     hero_cta_secondary: "See Our Work",
     work_title: "Proven Aesthetics",
     work_subtitle: "Explore some of our recent transformations.",
-    work_example_1: "Fitness Coach",
-    work_example_2: "Business Consultant",
-    work_example_3: "Content Creator",
+    work_example_1: "Personal Development",
+    work_example_2: "Fitness Coach",
+    work_example_3: "Women's Wellness",
     process_title: "How We Work",
     process_subtitle: "From zero to launch in 4 simple steps.",
     process_step1_title: "1. Discovery Call",
@@ -34,6 +34,8 @@ const translations = {
     reviewer_title: "Fitness Coach",
     chart_title: "Conversion Rate Growth",
     chart_subtitle: "Average Increase",
+    stat_old: "Industry: 1.5%",
+    stat_new: "Our Avg: 8.2%",
     pricing_title: "Simple, Transparent Pricing",
     pricing_subtitle: "Invest in your brand's future. Limited time promotional offers.",
     tier1_title: "Starter",
@@ -72,6 +74,10 @@ const translations = {
     faq_a5: "Yes, there is a small monthly maintenance fee depending on your tier: $10 for Starter, $20 for Pro, and $100 for Automated AI. You only pay for your own domain and basic hosting which we help you set up.",
     final_cta_title: "Ready to scale your business?",
     final_cta_subtitle: "Book your 30-minute discovery call below. Let's discuss how we can build a high-converting machine for your brand.",
+    booking_wa_title: "Prefer to text us?",
+    booking_wa_desc: "Get an instant response and discuss your project directly on WhatsApp.",
+    booking_wa_btn: "Chat on WhatsApp",
+    booking_or_cal: "Or pick a time for a video call:",
     cal_placeholder_title: "Calendly Widget Placeholder",
     cal_placeholder_desc: "The backend connection for direct booking will be integrated here in the next phase.",
     cal_btn: "Loading Calendar...",
@@ -92,9 +98,9 @@ const translations = {
     hero_cta_secondary: "شاهد أعمالنا",
     work_title: "تصاميم أثبتت فعاليتها",
     work_subtitle: "تصفح بعض أعمالنا الأخيرة.",
-    work_example_1: "مدرب لياقة",
-    work_example_2: "مستشار أعمال",
-    work_example_3: "صانع محتوى",
+    work_example_1: "تطوير الذات",
+    work_example_2: "مدرب لياقة",
+    work_example_3: "صحة المرأة",
     process_title: "كيف نعمل",
     process_subtitle: "من الفكرة إلى الإطلاق في 4 خطوات بسيطة.",
     process_step1_title: "1. مكالمة الاستكشاف",
@@ -110,6 +116,8 @@ const translations = {
     reviewer_title: "مدربة لياقة",
     chart_title: "نمو معدل التحويل",
     chart_subtitle: "متوسط الزيادة",
+    stat_old: "المتوسط: 1.5%",
+    stat_new: "معدلنا: 8.2%",
     pricing_title: "أسعار بسيطة وشفافة",
     pricing_subtitle: "استثمر في مستقبل علامتك التجارية. عروض ترويجية لفترة محدودة.",
     tier1_title: "البداية",
@@ -146,8 +154,12 @@ const translations = {
     faq_a3: "نعم! يمكنك البدء بالباقة العادية أو الاحترافية والترقية لاحقاً في أي وقت مع نمو أعمالك.",
     faq_q5: "هل هناك رسوم صيانة شهرية؟",
     faq_a5: "نعم، هناك رسوم صيانة شهرية بسيطة تعتمد على باقتك: 10$ للبداية، 20$ للاحترافي، و100$ للذكاء الاصطناعي. وتدفع فقط رسوم نطاقك واستضافتك الأساسية التي نساعدك في إعدادها.",
-    final_cta_title: "مستعد لتوسيع نطاق عملك؟",
+    final_cta_title: "هل أنت مستعد لتوسيع نطاق عملك؟",
     final_cta_subtitle: "احجز مكالمة اكتشاف مدتها 30 دقيقة أدناه. دعنا نناقش كيف يمكننا بناء آلة تحويل عالية لعلامتك التجارية.",
+    booking_wa_title: "هل تفضل المراسلة؟",
+    booking_wa_desc: "احصل على رد فوري وناقش مشروعك مباشرة عبر واتساب.",
+    booking_wa_btn: "تواصل عبر واتساب",
+    booking_or_cal: "أو اختر وقتاً لمكالمة فيديو:",
     cal_placeholder_title: "مكان أداة Calendly",
     cal_placeholder_desc: "سيتم دمج الاتصال الخلفي للحجز المباشر هنا في المرحلة القادمة.",
     cal_btn: "جاري تحميل التقويم...",
@@ -157,7 +169,7 @@ const translations = {
   }
 };
 
-let currentLang = 'en';
+let currentLang = 'ar';
 
 function toggleLanguage() {
   currentLang = currentLang === 'en' ? 'ar' : 'en';
@@ -165,7 +177,8 @@ function toggleLanguage() {
   document.documentElement.setAttribute('lang', currentLang);
   
   const toggleBtn = document.getElementById('langToggle');
-  toggleBtn.innerHTML = currentLang === 'ar' ? '🇬🇧 EN' : '🇦🇪 AR';
+  toggleBtn.innerHTML = currentLang === 'ar' ? '🇬🇧 EN' : '🇸🇦 AR';
+  toggleBtn.setAttribute('aria-label', currentLang === 'ar' ? 'Switch to English' : 'Switch to Arabic');
 
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
@@ -176,6 +189,30 @@ function toggleLanguage() {
 }
 
 document.getElementById('langToggle').addEventListener('click', toggleLanguage);
+
+// Initialize translated content on load
+document.querySelectorAll('[data-i18n]').forEach(el => {
+  const key = el.getAttribute('data-i18n');
+  if (translations[currentLang][key]) {
+    el.innerHTML = translations[currentLang][key];
+  }
+});
+
+/* --- Mobile Menu Toggle --- */
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const navLinks = document.querySelector('.nav-links');
+
+if(mobileMenuBtn) {
+  mobileMenuBtn.addEventListener('click', () => {
+    const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+    mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+    navLinks.classList.toggle('open');
+    
+    // Toggle icon
+    mobileMenuBtn.querySelector('.open-icon').style.display = isExpanded ? 'block' : 'none';
+    mobileMenuBtn.querySelector('.close-icon').style.display = isExpanded ? 'none' : 'block';
+  });
+}
 
 /* --- Navbar Scroll Effect --- */
 window.addEventListener('scroll', () => {
@@ -304,12 +341,19 @@ accordionItems.forEach(item => {
     accordionItems.forEach(faq => {
       faq.classList.remove('active');
       faq.querySelector('.accordion-content').style.maxHeight = null;
+      faq.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
     });
 
     if (!isActive) {
       item.classList.add('active');
+      header.setAttribute('aria-expanded', 'true');
       const content = item.querySelector('.accordion-content');
       content.style.maxHeight = content.scrollHeight + "px";
     }
   });
+});
+
+// Initialize Aria logic for accordions
+accordionItems.forEach(item => {
+  item.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
 });
